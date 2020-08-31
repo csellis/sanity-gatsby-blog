@@ -13,6 +13,7 @@ import person from './documents/person'
 import sampleProject from './documents/sampleProject'
 
 
+
 // Object types
 import bodyPortableText from './objects/bodyPortableText'
 import bioPortableText from './objects/bioPortableText'
@@ -34,7 +35,6 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    siteSettings,
     post,
     category,
     author,
@@ -48,7 +48,8 @@ export default createSchema({
     figure,
     projectMember,
     projectPortableText,
-    simplePortableText
+    simplePortableText,
+    siteSettings,
 
     // When added to this list, object types can be used as
     // { type: 'typename' } in other document schemas

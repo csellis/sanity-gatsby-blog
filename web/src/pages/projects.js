@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 import {
   mapEdgesToNodes,
   filterOutDocsWithoutSlugs,
@@ -12,7 +12,7 @@ import SEO from '../components/seo'
 import Layout from '../containers/layout'
 
 export const query = graphql`
-  query IndexPageQuery {
+  query ProjectsPageQuery {
     site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
       title
       description
@@ -60,7 +60,7 @@ export const query = graphql`
 `
 
 const IndexPage = props => {
-  const {data, errors} = props
+  const { data, errors } = props
 
   if (errors) {
     return (
