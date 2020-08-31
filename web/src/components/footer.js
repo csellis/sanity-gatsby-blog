@@ -2,7 +2,7 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="bottom-0 left-0 right-0 flex flex-col justify-center text-center">
+    <footer className="bottom-0 left-0 right-0 flex flex-col justify-center items-center text-center">
       <div className="text-gray-400">
         You can <a className="inline-block text-orange-500 hover:text-orange-600 active:text-orange-600" href="mailto:me@chrisellis.dev" target="_blank" rel="noopener noreferrer">
           hire
