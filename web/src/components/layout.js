@@ -8,7 +8,7 @@ class Layout extends React.Component {
     const { children } = this.props;
     return (
       <div className="">
-        <div className="relative sm:py-16 bg-white overflow-hidden">
+        <div className="relative sm:py-16 gray bg-gray-100 overflow-hidden">
 
           <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
             <div className="relative h-full text-lg max-w-prose mx-auto">

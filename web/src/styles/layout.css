@@ -8,6 +8,8 @@ html {
   font-family: var(--font-family-sans);
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
   background: var(--color-white);
   color: var(--color-black);
   margin: 0;
+  padding: 0;
 }
 
 html,
