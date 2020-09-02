@@ -6,6 +6,7 @@ import Footer from './footer';
 class Layout extends React.Component {
   render() {
     const { children } = this.props;
+
     return (
       <div className="">
         <div className="relative sm:py-16 gray bg-gray-100 overflow-hidden">
@@ -41,10 +42,10 @@ class Layout extends React.Component {
 
           <div className="relative px-4 sm:px-6 lg:px-8">
             <header className="mt-4 max-w-prose mx-auto mb-6 z-50">
-              <h1 className=""          >
+              <h1 className="">
                 <Link to="/" className="text-orange-500">
                   {'<<'} Home
-              </Link>
+                </Link>
               </h1>
             </header>
             <div className="text-lg max-w-prose mx-auto mb-6">
