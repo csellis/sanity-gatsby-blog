@@ -26,8 +26,6 @@ function Index(props) {
           <p className="mt-4 ml-4 sm:text-4xl">
             I've also been <a href="https://www.twitch.tv/chrisellisdev" className="inline-block text-gray-500 hover:text-gray-600 active:text-gray-600">streaming</a> lately. <br />(Also <a href="https://www.youtube.com/channel/UCaGN_4TNAclDKKDwqVHzj7g" className="inline-block text-gray-500 hover:text-gray-600 active:text-gray-600">here</a>.)
           </p>
-
-
         </div>
       </div>
       <Footer />
@@ -38,8 +36,6 @@ function Index(props) {
 Index.propTypes = {
   data: PropTypes.object
 };
-
-
 
 export default Index;
 export const query = graphql`
