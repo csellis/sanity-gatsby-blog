@@ -13,7 +13,6 @@ function Index(props) {
         title="Full-stack Web Developer"
         keywords={[`javascript`, `react`, `Full-stack Web Developer`, `gatsby`]}
       />
-      {/* <Navigation {...props} /> */}
       <div className="flex-1 flex flex-col text-gray-800 justify-center items-center sm:w-3/4 sm:mx-auto">
         <div className="flex flex-col z-10">
           <h1 className="text-2xl sm:text-5xl text-gray-800">
