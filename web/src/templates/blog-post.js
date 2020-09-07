@@ -74,7 +74,7 @@ const BlogPostTemplate = props => {
       )}
 
       {post && (
-        <div className="relative bg-white overflow-hidden">
+        <div className="relative bg-gray-100 overflow-hidden">
           <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
             <div className="relative h-full text-lg max-w-prose mx-auto z-0">
               <svg className="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
