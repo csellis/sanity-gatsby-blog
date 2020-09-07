@@ -11,12 +11,12 @@ import styles from './blog-post.module.css'
 function BlogPost(props) {
   const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
 
-  console.log(_rawBody)
+  // console.log(_rawBody)
   const firstParagraph = _rawBody.find(block => {
     return block.style === "normal"
   })
 
-  console.log(firstParagraph)
+  // console.log(firstParagraph)
   return (
     <div className="relative px-4 sm:px-6 lg:px-8">
       <div className="text-lg prose sm:prose-lg max-w-prose mx-auto mb-6">

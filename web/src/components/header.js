@@ -22,7 +22,7 @@ const Header = () => {
   const match = linkLocations.find(linkLocation => url.includes(linkLocation.match)) || { text: "Home", route: "/" }
 
   return (
-    <header className="max-w-prose prose-lg mx-auto">
+    <header className="max-w-prose prose-lg z-50">
       <Link to={match.route} className="text-orange-500 font-medium text-lg sm:text-xl">
         {'<<'} {match.text}
       </Link>

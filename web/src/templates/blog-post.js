@@ -6,6 +6,7 @@ import BlogPost from '../components/blog-post'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
 import Header from "../components/header";
+import Footer from "../components/footer";
 import { toPlainText } from '../lib/helpers'
 
 export const query = graphql`
@@ -73,9 +74,9 @@ const BlogPostTemplate = props => {
       )}
 
       {post && (
-        <div className="relative py-8 bg-white overflow-hidden">
+        <div className="relative bg-white overflow-hidden">
           <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
-            <div className="relative h-full text-lg max-w-prose mx-auto">
+            <div className="relative h-full text-lg max-w-prose mx-auto z-0">
               <svg className="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">
                 <defs>
                   <pattern id="74b3fd99-0a6f-4271-bef2-e80eeafdf357" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
@@ -102,9 +103,19 @@ const BlogPostTemplate = props => {
               </svg>
             </div>
           </div>
-          <div className="relative px-4 sm:px-6 lg:px-8">
+
+          {/* <div className="relative px-4 sm:px-6 lg:px-8">
             <Header />
             <BlogPost {...post} />
+          </div> */}
+          <div className="mx-auto px-4 min-h-screen max-w-screen-lg z-50 py-4 flex flex-col">
+            <Header />
+            <div className="flex flex-col px-4 flex-1">
+              <BlogPost {...post} />
+            </div>
+            <div className="mt-12">
+              <Footer />
+            </div>
           </div>
         </div>
       )
