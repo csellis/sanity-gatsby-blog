@@ -10,7 +10,7 @@ class Layout extends React.Component {
     return (
       <div className="">
         <div className="relative sm:py-16 gray bg-gray-100 overflow-hidden">
-
+          <span className="text-red-600 text-6xl">YOLOLO</span>
           <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
             <div className="relative h-full text-lg max-w-prose mx-auto">
               <svg className="absolute top-12 left-full transform translate-x-32" width="404" height="384" fill="none" viewBox="0 0 404 384">

@@ -10,50 +10,27 @@ import styles from './blog-post.module.css'
 
 function BlogPost(props) {
   const { _rawBody, authors, categories, title, mainImage, publishedAt } = props
+
+  console.log(_rawBody)
+  const firstParagraph = _rawBody.find(block => {
+    return block.style === "normal"
+  })
+
+  console.log(firstParagraph)
   return (
-    <article className="mt-4">
-      {mainImage && mainImage.asset && (
-        <div className={styles.mainImage}>
-          <img
-            src={imageUrlFor(buildImageObj(mainImage))
-              .width(1200)
-              .height(Math.floor((9 / 16) * 1200))
-              .fit('crop')
-              .auto('format')
-              .url()}
-            alt={mainImage.alt}
-          />
-        </div>
-      )}
-      <Container>
-        <div className={styles.grid}>
-          <div className={styles.mainContent}>
-            <h1 className={styles.title}>{title}</h1>
-            {_rawBody && <PortableText blocks={_rawBody} />}
-          </div>
-          <aside className={styles.metaContent}>
-            {publishedAt && (
-              <div className={styles.publishedAt}>
-                {differenceInDays(new Date(publishedAt), new Date()) > 3
-                  ? distanceInWords(new Date(publishedAt), new Date())
-                  : format(new Date(publishedAt), 'MMMM Do, YYYY')}
-              </div>
-            )}
-            {authors && <AuthorList items={authors} title='Authors' />}
-            {categories && (
-              <div className={styles.categories}>
-                <h3 className={styles.categoriesHeadline}>Categories</h3>
-                <ul>
-                  {categories.map(category => (
-                    <li key={category._id}>{category.title}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </aside>
-        </div>
-      </Container>
-    </article>
+    <div className="relative px-4 sm:px-6 lg:px-8">
+      <div className="text-lg prose-sm sm:prose max-w-prose mx-auto mb-6">
+        <p className="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Writing</p>
+        <h1 className="mt-2 mb-8 text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:leading-10">{title}</h1>
+        <p className="text-xl text-gray-500 leading-8">
+          {firstParagraph && <PortableText blocks={firstParagraph} />}
+        </p>
+      </div>
+      <div className="prose sm:prose-lg text-gray-600 mx-auto">
+        {_rawBody && <PortableText blocks={_rawBody.slice(1)} />}
+      </div>
+    </div>
+
   )
 }
 
