@@ -19,12 +19,12 @@ function BlogPost(props) {
   console.log(firstParagraph)
   return (
     <div className="relative px-4 sm:px-6 lg:px-8">
-      <div className="text-lg prose-sm sm:prose max-w-prose mx-auto mb-6">
+      <div className="text-lg prose sm:prose-lg max-w-prose mx-auto mb-6">
         <p className="text-base text-center leading-6 text-indigo-600 font-semibold tracking-wide uppercase">Writing</p>
         <h1 className="mt-2 mb-8 text-center leading-8 font-extrabold tracking-tight text-gray-800 sm:leading-10">{title}</h1>
-        <p className="text-xl text-gray-500 leading-8">
+        <div className="text-xl text-gray-500 leading-8">
           {firstParagraph && <PortableText blocks={firstParagraph} />}
-        </p>
+        </div>
       </div>
       <div className="prose sm:prose-lg text-gray-600 mx-auto">
         {_rawBody && <PortableText blocks={_rawBody.slice(1)} />}

@@ -35,33 +35,41 @@ export const query = graphql`
   }
 
   query BlogPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
-      keywords
-    }
-    posts: allSanityPost(
-      limit: 6
-      sort: { fields: [publishedAt], order: DESC }
-      filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
-    ) {
-      edges {
-        node {
-          id
-          publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
-          title
-          _rawExcerpt
-          slug {
-            current
+  site: sanitySiteSettings(_id: {regex: "/(drafts.|)siteSettings/"}) {
+    title
+    description
+    keywords
+  }
+  posts: allSanityPost(limit: 6, sort: {fields: [publishedAt], order: DESC}, filter: {slug: {current: {ne: null}}, publishedAt: {ne: null}}) {
+    edges {
+      node {
+        id
+        publishedAt
+        mainImage {
+          ...SanityImage
+          alt
+        }
+        title
+        _rawExcerpt
+        slug {
+          current
+        }
+        authors {
+          author {
+            image {
+              ...SanityImage
+              alt
+              asset {
+                id
+              }
+            }
+            name
           }
         }
       }
     }
   }
+}
 `
 
 const IndexPage = props => {
