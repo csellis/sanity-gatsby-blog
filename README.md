@@ -1,14 +1,8 @@
-# Blog with Gatsby
+# My Personal Site 🚀
 
-_Fully customizable blog template with a React.js front-end._
+This is my personal site built with [Gatsby.js](https://gatsbyjs.org), [Sanity.io](https://www.sanity.io), [Netlify](https://netlify.com), & [TailwindCSS](https://tailwindcss.com)
 
-Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-blog).
-
-## What you have
-
-- A blazing fast blog with [Gatsby.js](https://gatsbyjs.org)
-- Structured content using [Sanity.io](https://www.sanity.io)
-- Global deployment on [Netlify](https://netlify.com)
+*I merged two Sanity repositories containing the Gatsby porfolio and blog.*
 
 ## Quick start
 
@@ -19,20 +13,8 @@ Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-i
    - Your frontend should be running on [http://localhost:8000](http://localhost:8000)
 4. `npm run build` to build to production locally
 
-## Enable real-time content preview on development
+Frontend:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6b621925-529d-4f7a-9ffc-ca638df6d76e/deploy-status)](https://app.netlify.com/sites/chrisellisdev/deploys)
 
-1. Go to your [project’s API settings on manage.sanity.io](https://manage.sanity.io/projects/cf3qsmj2/settings/api) and create a token with read rights.
-2. Rename `.env.development.template` to `.env.development` and paste in the token: `SANITY_READ_TOKEN="yourTokenHere"`.
-3. Restart the development server (`ctrl + C` and `npm run dev`).
-
-If you want to turn off preview you can set `watchMode: false` in gatsby-config.js. If you just want to preview published changes you can set `overlayDrafts: false` in gatsby-config.js.
-
-## Deploy changes
-
-Netlify automatically deploys new changes commited to master on GitHub. If you want to change deployment branch, do so in [build & deploy settings on Netlify](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
-
-## Stuck? Get help
-
-[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
-
-Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
+Backend:
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2abc9d67-0332-4e89-b08b-f01de64c914d/deploy-status)](https://app.netlify.com/sites/chrisellisdevstudio/deploys)
