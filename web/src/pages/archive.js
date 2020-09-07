@@ -59,12 +59,15 @@ const ArchivePage = props => {
 
   const postNodes = data && data.posts && mapEdgesToNodes(data.posts)
 
+
   return (
     <Layout>
       <SEO title='Archive' />
       <Container>
         <h1 className={responsiveTitle1}>Archive</h1>
-        {postNodes && postNodes.length > 0 && <BlogPostPreviewGrid nodes={postNodes} />}
+        {postNodes && (
+          <BlogPostPreviewGrid nodes={postNodes} />
+        )}
       </Container>
     </Layout>
   )
