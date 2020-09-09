@@ -1,4 +1,6 @@
 import React from 'react'
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import Figure from './Figure'
 
 
@@ -55,7 +57,16 @@ const serializers = {
   types: {
     authorReference: ({ node }) => <span>{node.author.name}</span>,
     mainImage: Figure,
-    block: BlockRenderer
+    block: BlockRenderer,
+    code: props => (
+      <SyntaxHighlighter
+        language={props.node.language || "text"}
+        style={atomDark}
+        className="pre"
+      >
+        {props.node.code}
+      </SyntaxHighlighter>
+    )
   }
 }
 
