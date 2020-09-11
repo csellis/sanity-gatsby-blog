@@ -11,21 +11,23 @@ import { responsiveTitle3 } from './typography.module.css'
 function BlogPostPreview(props) {
   // console.log(props)
   const author = props.authors[0].author
-  console.log(author)
+  // console.log(author)
   return (
     <div className="flex flex-col rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-2xl overflow-hidden">
       <div className="flex-shrink-0">
         <Link to={getBlogUrl(props.publishedAt, props.slug.current)} className="block">
-
           <img className="h-48 w-full object-cover" src={imageUrlFor(buildImageObj(props.mainImage)).url()} alt={props.mainImage.alt} />
         </Link>
       </div>
       <div className="flex-1 bg-white p-6 flex flex-col justify-between">
         <div className="flex-1">
-          <p className="text-sm leading-5 font-medium text-indigo-600">
-            <Link to="/blog" className="hover:underline">
-              Blog
-            </Link>
+          <p className="text-sm leading-5 font-medium text-indigo-600 flex justify-between">
+            {props.categories && props.categories.slice(0, 3).map(category => {
+              return (
+                <span key={category.id}>{category.title}</span>
+              )
+            }
+            )}
           </p>
           <Link to={getBlogUrl(props.publishedAt, props.slug.current)} className="block">
             <h3 className="mt-2 text-xl leading-7 font-semibold text-gray-900">

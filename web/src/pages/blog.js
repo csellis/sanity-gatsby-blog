@@ -45,6 +45,10 @@ export const query = graphql`
       node {
         id
         publishedAt
+        categories {
+          title
+          id
+        }
         mainImage {
           ...SanityImage
           alt

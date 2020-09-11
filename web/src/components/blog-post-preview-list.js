@@ -29,9 +29,6 @@ function BlogPostPreviewGrid(props) {
         </div>
       </div>
 
-
-
-
       <div className={styles.root}>
         <ul className={styles.grid}>
         </ul>
