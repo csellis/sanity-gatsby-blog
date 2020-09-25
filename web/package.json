@@ -9,7 +9,8 @@
     "dev": "npm run clean-cache && gatsby develop",
     "lint": "eslint .",
     "format": "prettier-eslint --write \"**/*.js\" \"!.cache/**\" \"!node_modules/**\" \"!public/**\"",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+    "prebuild": "cd functions/enroll/ && npm install"
   },
   "devDependencies": {
     "@sanity/block-content-to-react": "^2.0.7",
@@ -39,6 +40,8 @@
     "@tailwindcss/ui": "^0.5.0",
     "@tailwindui/react": "^0.1.1",
     "gatsby-image": "^2.0.41",
+    "netlify-cli": "^2.63.2",
+    "netlify-lambda": "^2.0.1",
     "react-syntax-highlighter": "^13.5.3",
     "tailwindcss": "^1.8.3"
   }
