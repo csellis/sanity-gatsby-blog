@@ -1,7 +1,7 @@
 export default {
   name: 'bodyPortableText',
   type: 'array',
-  title: 'Post body',
+  title: 'Body',
   of: [
     {
       type: 'block',
@@ -64,5 +64,8 @@ export default {
       title: 'Code block',
       options: { theme: 'github' }
     },
+    {
+      type: 'youtube'
+    }
   ]
 }
